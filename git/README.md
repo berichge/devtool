@@ -2,27 +2,51 @@
 
 Git is a popular version control system.
 
-## Basic workflow
+## Setup
 
-Working directory -> Staging area -> git repository
+After downloading git, you can use follow command to setup local git env variables.
 
-## Env setup
+    git config --global user.name "my name"
+    git config --global user.email "my@gamil.com"
+    // to verify
+    git config --global list
 
-setup username
+## Basic comments
 
-`git config --global user.name "berichge"`
-`git config --global user.email "berichge@gmail.com"`
+- git clone
+ clone a repo from remote to local.
 
-list all configs
-`git config --list`
+    `https://github.com/berichge/devtool`
 
-## Basic command
+- git status
 
-git clone
-git log
-git show `commit sha`
-git diff
-git status
-git add `file`
-git push origin master
-git pull
+- git add
+    this command will move file changes from ***work directory*** to git ***staging area***.
+  - -A add all changes
+
+- git commit -m "msg"
+    move changes from staging area to local git repo. Your local branch will ahead of origin/master by commits.
+- git push origin master
+    ***origin*** is the name of ***remote*** by default. ***Master*** refers to our default and only local branch, that will can use to exchange file changes to and from. ***origin/master*** is the copy of master branch in remote.
+- git init [repo name]
+- git reset HEAD [name of file]. unstage changes on file.->move file back to unstage work directory.
+- git checkout [name of file], discard changes in local work directory.
+  - -- [filename]: git checkout -- [filename]
+- git mv [current file name] [new file name]
+- git rm [file to be deleted]
+- git log: check all commits
+  - git log --oneline --graph --decorate
+  - git log [from commit] [to commit]
+  - git log --since="3 days ago"
+  - git log --follow -- [file]
+  - git show [commit id]
+
+## Basic Operations
+
+git fork(from UI), fork a repo to a new remote branch.
+
+ignore files by .gitignore. This file need to be added for version control
+
+    .DS_Store
+    *.log
+    log -- folder from same path
