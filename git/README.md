@@ -43,10 +43,27 @@ After downloading git, you can use follow command to setup local git env variabl
 
 ## Basic Operations
 
-git fork(from UI), fork a repo to a new remote branch.
+### git fork(from UI)
 
-ignore files by .gitignore. This file need to be added for version control
+fork a repo to a new remote branch.
+
+### ignore files
+
+by .gitignore. This file need to be added for version control
 
     .DS_Store
     *.log
     log -- folder from same path
+
+### init a remote branch
+
+Steps
+1. Create a repo branch from git UI
+2. In local branch, run `git init`
+3. run command `git remote add origin {your remote git url}
+4. confirm remote branch is added by `git remote -v`, you should see git remote url aliased as the origin remote
+5. create a master branch by `git checkout -b master`
+6. commit change to local git staging repo, `git commit -m "create a master branch" --allow-empty`
+7. git push origin master
+8. reset branch by `git reset --hard origin/master`
+9. git pull origin master

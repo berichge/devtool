@@ -174,3 +174,12 @@ declare a function
         ... $1 -- use argument in function
         return val
     }
+
+### Other most used command
+
+#### Escape characters
+
+\ means the line is not ended.
+
+    GO111MODULE=on \
+    go mod tidy
