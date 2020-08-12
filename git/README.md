@@ -67,3 +67,8 @@ Steps
 7. git push origin master
 8. reset branch by `git reset --hard origin/master`
 9. git pull origin master
+
+### Git merge commits
+git rebase -i HEAD~{$numOfCommits} 
+git commit --amend
+git push -f
