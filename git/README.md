@@ -69,6 +69,6 @@ Steps
 9. git pull origin master
 
 ### Git merge commits
-git rebase -i HEAD~{$numOfCommits} 
-git commit --amend
-git push -f
+git rebase -i HEAD~{$numOfCommits}.   
+git commit --amend.  
+git push -f.  
