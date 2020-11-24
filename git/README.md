@@ -73,3 +73,6 @@ git rebase -i HEAD~{$numOfCommits}.
 git commit --amend.  
 git push -f.  
 http://jartto.wang/2018/12/11/git-rebase/
+
+Undo:
+git reset --hard @{1}
