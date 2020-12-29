@@ -58,7 +58,7 @@ by .gitignore. This file need to be added for version control
 ### init a remote branch
 
 Steps
-1. Create a repo branch from git UI
+1. Create a repo branch from git web page
 2. In local branch, run `git init`
 3. run command `git remote add origin {your remote git url}
 4. confirm remote branch is added by `git remote -v`, you should see git remote url aliased as the origin remote
